@@ -1,0 +1,21 @@
+{
+  "name": "clean-api",
+  "version": "1.0.0",
+  "description": "rest api clean",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "rest"
+  ],
+  "author": "Akbar Hidayatuloh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0"
+  }
+}
