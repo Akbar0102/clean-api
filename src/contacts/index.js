@@ -1,6 +1,6 @@
-import makeDb from "../db";
-import makeContactList from "./contact-list";
-import makeContactsEndpointHandler from "./contacts-endpoint";
+import makeDb from "../db/index.js";
+import makeContactList from "./contact-list.js";
+import makeContactsEndpointHandler from "./contacts-endpoint.js";
 
 const database = makeDb();
 const contactList = makeContactList({ database });

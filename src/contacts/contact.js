@@ -1,7 +1,7 @@
-import requiredParam from "../helpers/required-param";
-import { InvalidPropertyError } from "../helpers/errors";
-import isValidEmail from "../helpers/is-valid-email";
-import upperFirst from "../helpers/upper-first";
+import requiredParam from "../helpers/required-param.js";
+import { InvalidPropertyError } from "../helpers/errors.js";
+import isValidEmail from "../helpers/is-valid-email.js";
+import upperFirst from "../helpers/upper-first.js";
 
 export default function makeContact(
   contactInfo = requiredParam("contactInfo")

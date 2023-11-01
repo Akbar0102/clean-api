@@ -1,5 +1,5 @@
-import makeContact from "./contact";
-import { UniqueConstraintError } from "../helpers/errors";
+import makeContact from "./contact.js";
+import { UniqueConstraintError } from "../helpers/errors.js";
 
 export default function makeContactList({ database }) {
   return Object.freeze({
@@ -48,6 +48,7 @@ export default function makeContactList({ database }) {
         }
         throw mongoError;
       });
+
     return {
       success: result.ok === 1,
       created: documentToContact(ops[0]),

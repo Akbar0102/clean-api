@@ -2,9 +2,9 @@ import {
   UniqueConstraintError,
   InvalidPropertyError,
   RequiredParameterError,
-} from "../helpers/errors";
-import makeHttpError from "../helpers/http-error";
-import makeContact from "./contact";
+} from "../helpers/errors.js";
+import makeHttpError from "../helpers/http-error.js";
+import makeContact from "./contact.js";
 
 export default function makeContactsEndpointHandler({ contactList }) {
   return async function handle(httpRequest) {
