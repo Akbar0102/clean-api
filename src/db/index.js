@@ -1,6 +1,6 @@
-import { MongoClient } from "mongodb";
+const { MongoClient } = require("mongodb");
 
-export default async function makeDb() {
+module.exports = async function makeDb() {
   const url = "mongodb://localhost:27017/";
   const dbName = "mm_api_demo";
 
@@ -9,7 +9,7 @@ export default async function makeDb() {
   const db = await client.db(dbName);
   db.makeId = makeIdFromString;
   return db;
-}
+};
 
 function makeIdFromString(id) {
   return new mongodb.ObjectId(id);

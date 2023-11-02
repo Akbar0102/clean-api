@@ -1,7 +1,7 @@
-import express from "express";
-import bodyParser from "body-parser";
-import handleContactsRequest from "./contacts/index.js";
-import adaptRequest from "./helpers/adapt-request.js";
+const express = require("express");
+const bodyParser = require("body-parser");
+const handleContactsRequest = require("./contacts");
+const adaptRequest = require("./helpers/adapt-request");
 
 const app = express();
 app.use(bodyParser.json());

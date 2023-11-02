@@ -1,4 +1,4 @@
-export default function makeHttpError({ statusCode, errorMessage }) {
+module.exports = function makeHttpError({ statusCode, errorMessage }) {
   return {
     headers: {
       "Content-Type": "application/json",
@@ -9,4 +9,4 @@ export default function makeHttpError({ statusCode, errorMessage }) {
       error: errorMessage,
     }),
   };
-}
+};

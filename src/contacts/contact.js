@@ -1,9 +1,9 @@
-import requiredParam from "../helpers/required-param.js";
-import { InvalidPropertyError } from "../helpers/errors.js";
-import isValidEmail from "../helpers/is-valid-email.js";
-import upperFirst from "../helpers/upper-first.js";
+const requiredParam = require("../helpers/required-param");
+const { InvalidPropertyError } = require("../helpers/errors");
+const isValidEmail = require("../helpers/is-valid-email");
+const upperFirst = require("../helpers/upper-first");
 
-export default function makeContact(
+module.exports = function makeContact(
   contactInfo = requiredParam("contactInfo")
 ) {
   const validContact = validate(contactInfo);
@@ -44,4 +44,4 @@ export default function makeContact(
       emailAddress: emailAddress.toLowerCase(),
     };
   }
-}
+};

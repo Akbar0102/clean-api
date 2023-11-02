@@ -1,9 +1,9 @@
-import makeDb from "../db/index.js";
-import makeContactList from "./contact-list.js";
-import makeContactsEndpointHandler from "./contacts-endpoint.js";
+const makeDb = require("../db/index");
+const makeContactList = require("./contact-list");
+const makeContactsEndpointHandler = require("./contacts-endpoint");
 
 const database = makeDb();
 const contactList = makeContactList({ database });
 const contactsEndPointHandler = makeContactsEndpointHandler({ contactList });
 
-export default contactsEndPointHandler;
+module.exports = contactsEndPointHandler;

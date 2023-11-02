@@ -1,4 +1,4 @@
-export class UniqueConstraintError extends Error {
+class UniqueConstraintError extends Error {
   constructor(value) {
     super(`${value} must be unique.`);
 
@@ -8,7 +8,7 @@ export class UniqueConstraintError extends Error {
   }
 }
 
-export class InvalidPropertyError extends Error {
+class InvalidPropertyError extends Error {
   constructor(msg) {
     super(msg);
 
@@ -18,7 +18,7 @@ export class InvalidPropertyError extends Error {
   }
 }
 
-export class RequiredParameterError extends Error {
+class RequiredParameterError extends Error {
   constructor(param) {
     super(`${param} can not be null or undefined.`);
 
@@ -27,3 +27,9 @@ export class RequiredParameterError extends Error {
     }
   }
 }
+
+module.exportss = {
+  UniqueConstraintError,
+  InvalidPropertyError,
+  RequiredParameterError,
+};

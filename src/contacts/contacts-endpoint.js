@@ -1,12 +1,12 @@
-import {
+const {
   UniqueConstraintError,
   InvalidPropertyError,
   RequiredParameterError,
-} from "../helpers/errors.js";
-import makeHttpError from "../helpers/http-error.js";
-import makeContact from "./contact.js";
+} = require("../helpers/errors");
+const makeHttpError = require("../helpers/http-error");
+const makeContact = require("./contact");
 
-export default function makeContactsEndpointHandler({ contactList }) {
+module.exports = function makeContactsEndpointHandler({ contactList }) {
   return async function handle(httpRequest) {
     switch (httpRequest.method) {
       case "POST":
@@ -83,4 +83,4 @@ export default function makeContactsEndpointHandler({ contactList }) {
       });
     }
   }
-}
+};

@@ -1,4 +1,4 @@
-export default function adaptRequest(req = {}) {
+module.exports = function adaptRequest(req = {}) {
   return Object.freeze({
     path: req.path,
     method: req.method,
@@ -6,4 +6,4 @@ export default function adaptRequest(req = {}) {
     queryParams: req.query,
     body: req.body,
   });
-}
+};

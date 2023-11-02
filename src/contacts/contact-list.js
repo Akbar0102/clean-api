@@ -1,7 +1,7 @@
-import makeContact from "./contact.js";
-import { UniqueConstraintError } from "../helpers/errors.js";
+const makeContact = require("./contact");
+const { UniqueConstraintError } = require("../helpers/errors");
 
-export default function makeContactList({ database }) {
+module.exports = function makeContactList({ database }) {
   return Object.freeze({
     add,
     findByEmail,
@@ -88,4 +88,4 @@ export default function makeContactList({ database }) {
   async function replace(contact) {}
 
   async function update(contact) {}
-}
+};
